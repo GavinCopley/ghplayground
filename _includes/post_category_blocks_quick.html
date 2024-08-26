@@ -1,0 +1,38 @@
+{% if site.cata.size > 0 %}
+<h2>Blog Quick Open</h2>
+
+  <!-- Initialize an empty array to hold cata -->
+  {% assign cata = "" | split:"" %}
+  {% for c in site.cata %}
+  <!-- Push each category name into the cata array -->
+    {% assign cata = cata | push: c[0] %}
+  {% endfor %}
+  <!-- Sort the cata array naturally -->
+  {% assign cata = cata | sort_natural %}
+
+  <!-- Start the unordered list with class 'post-list' style -->
+  <ul class="post-list">
+    {% for category in cata %}
+    <li>
+      <!-- Box shadow and rounded corners, using Primer CSS classes https://github.com/primer/css -->
+      <div class="Box box-shadow-medium rounded-1 col-12">
+        <div class="col-8 d-table-cell p-3">
+
+          <h3><a href="#{{ category }}">{{ category }}</a></h3>
+          {% for post in site.cata[category] %}
+          {% if post.hide != true %}
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <!-- Post meta information with title and date -->
+          <p class="post-meta post-meta-title">
+            <a class="page-meta" href="{{ site.baseurl }}{{ post.url }}"> {{post.title}}</a>  • {{ post.date | date: date_format }}
+          </p>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+{% endif %}
