@@ -139,7 +139,7 @@
   
       ,"page2": {
           "title": "About",
-          "content": "Creator of Student 2025 .",
+          "content": "Creator of Student 2025 . My name is Gyutae. .",
           "url": "http://localhost:4100/githubplayground/about/",
           "relUrl": "/about/",
           "date": ""
@@ -152,7 +152,7 @@
   
       ,"page4": {
           "title": "Github Playground",
-          "content": "Welcome to the page of Gavin and __ .",
+          "content": "Welcome to the page of Gavin, Gyutae and ___ .",
           "url": "http://localhost:4100/githubplayground/",
           "relUrl": "/",
           "date": ""

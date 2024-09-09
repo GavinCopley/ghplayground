@@ -5,7 +5,7 @@ description: Our Home Page
 hide: true
 ---
 
-Welcome to the page of Gavin and ____
+Welcome to the page of Gavin, Gyutae and ___
 
 
 {%- include post_category_blocks_quick.html -%}
